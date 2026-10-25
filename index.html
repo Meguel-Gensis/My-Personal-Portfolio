@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agustin Miguel Gensis | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --dark: #111016;
+    --panel: #1b1922;
+    --purple: #d6a8f0;
+    --blue: #72c8ee;
+    --white: #f8f6fb;
+    --muted: #b6b0c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #d5d0d6;
+    color: var(--white);
+    padding: 35px 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.page {
+    width: min(1150px, 100%);
+    margin: auto;
+    background: var(--dark);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 25px 80px #29202e35;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    height: 76px;
+    width: 88%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    font-size: 10px;
+    color: #d0cbd6;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.nav-socials {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-socials a {
+    border: 1px solid #ffffff25;
+    padding: 5px 10px;
+    border-radius: 12px;
+    transition: .2s;
+}
+
+.nav-socials a:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+.nav-cta {
+    padding: 10px 16px;
+    border: 1px solid #ffffff35;
+    border-radius: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: transparent;
+    border: 1px solid #ffffff35;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 460px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #111016 0%, #17131d 48%, #28202d 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 80% 45%, #c7a4db33, transparent 35%),
+        linear-gradient(0deg, #0c0b10a8, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 0 55px 9%;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    max-width: 500px;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--purple);
+}
+
+.hero h2 {
+    margin-top: 14px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.hero-description {
+    max-width: 390px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    margin: 19px 0 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 12px 19px;
+    font-size: 10px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: #f0d6f6;
+    color: #21172b;
+}
+
+.btn-secondary {
+    border: 1px solid #ffffff35;
+    color: #eee6f3;
+}
+
+/* DECORATIVE ANIME-INSPIRED ART — NO PERSONAL PHOTO */
+
+.hero-art {
+    min-height: 410px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.art-glow {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    background: #e5c3f0;
+    box-shadow: 0 0 70px #cfa0e655;
+    opacity: .95;
+}
+
+.art-orbit {
+    position: absolute;
+    width: 340px;
+    height: 150px;
+    border: 2px solid #c3a5ef;
+    border-radius: 50%;
+    transform: rotate(-35deg);
+    z-index: 1;
+}
+
+.art-orbit.two {
+    transform: rotate(45deg);
+    border-color: #77d9f3;
+    width: 320px;
+    height: 120px;
+}
+
+.art-card {
+    width: 250px;
+    height: 300px;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px;
+    background:
+        linear-gradient(145deg, #29213b 0%, #17131f 65%, #141c2a 100%);
+    border: 1px solid #ffffff45;
+    border-radius: 120px 120px 25px 25px;
+    box-shadow: 0 15px 60px #08061055;
+    overflow: hidden;
+}
+
+.art-card::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 135px;
+    background: linear-gradient(145deg, #3d2b54, #191322);
+    border-radius: 50% 50% 43% 43%;
+    box-shadow: 0 0 30px #bd93e52a;
+}
+
+.art-card::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-8deg);
+    width: 145px;
+    height: 65px;
+    background: #21182e;
+    border-radius: 80% 30% 10% 20%;
+    border-bottom: 5px solid #a783ca;
+}
+
+.art-line {
+    position: absolute;
+    top: 115px;
+    width: 155px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #85dafa, transparent);
+    transform: rotate(-22deg);
+    box-shadow: 0 0 15px #80dafa;
+}
+
+.art-label {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+}
+
+.art-label strong {
+    display: block;
+    font-size: 16px;
+    letter-spacing: 4px;
+}
+
+.art-label span {
+    display: block;
+    color: #c9badb;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.art-spark {
+    position: absolute;
+    z-index: 3;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.spark-a {
+    top: 55px;
+    right: 12%;
+}
+
+.spark-b {
+    bottom: 55px;
+    left: 9%;
+    color: var(--blue);
+}
+
+/* SECTION STYLING */
+
+.section {
+    width: 84%;
+    margin: auto;
+    padding: 65px 0;
+}
+
+.section-label {
+    color: var(--purple);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: clamp(27px, 3.5vw, 38px);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 600px;
+}
+
+.separator {
+    height: 1px;
+    background: #ffffff14;
+    width: 84%;
+    margin: auto;
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 27px;
+}
+
+.info-card {
+    padding: 26px;
+    background: #1a1720;
+    border: 1px solid #ffffff13;
+    border-radius: 13px;
+}
+
+.info-card h3 {
+    font-size: 16px;
+    margin-bottom: 13px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.detail small {
+    display: block;
+    color: #a89caf;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.detail strong {
+    font-size: 11px;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 28px;
+}
+
+.skill-card {
+    padding: 24px;
+    background: #1a1720;
+    border: 1px solid #ffffff13;
+    border-radius: 13px;
+    transition: .2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #bd92dc;
+}
+
+.skill-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: #c59be51a;
+    color: #e4c5ff;
+    font-size: 19px;
+    margin-bottom: 17px;
+}
+
+.skill-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.tags span {
+    border: 1px solid #655271;
+    padding: 5px 8px;
+    border-radius: 15px;
+    font-size: 9px;
+    color: #e5d2f3;
+}
+
+/* LORAPASS PROJECT */
+
+.project-card {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    margin-top: 28px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ffffff1a;
+    background: #191620;
+}
+
+.project-visual {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at center, #c1a0dc26, transparent 60%),
+        #17131d;
+}
+
+.project-emblem {
+    width: 155px;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    border: 1px solid #d4b3f3;
+    background: #20172b;
+    box-shadow: 0 0 35px #d3a4f522;
+    transform: rotate(-4deg);
+}
+
+.project-emblem span {
+    font-size: 40px;
+}
+
+.project-emblem strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.project-info {
+    padding: 32px;
+    align-self: center;
+}
+
+.project-type {
+    color: var(--purple);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.project-info h3 {
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.project-info p,
+.project-info li {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+.project-info ul {
+    padding-left: 17px;
+    margin-top: 14px;
+}
+
+/* GOALS */
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.goal-card {
+    padding: 23px;
+    border: 1px solid #ffffff14;
+    border-radius: 13px;
+    background: #1a1720;
+}
+
+.goal-card span {
+    color: var(--purple);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.goal-card h3 {
+    font-size: 15px;
+    margin: 11px 0 8px;
+}
+
+.goal-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact-panel {
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #ffffff20;
+    background:
+        radial-gradient(ellipse at right, #c9a0ed19, transparent 60%),
+        #1a1720;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.contact-panel h2 {
+    font-size: clamp(25px, 4vw, 36px);
+}
+
+.contact-panel p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: 10px;
+}
+
+.email {
+    display: inline-block;
+    margin-top: 12px;
+    color: #e0baf8;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+
+footer {
+    width: 84%;
+    margin: auto;
+    padding: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 10px;
+    color: #94899e;
+}
+
+footer strong {
+    color: #ded0e8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a:hover {
+    color: var(--purple);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    body {
+        padding: 12px;
+    }
+
+    .page {
+        border-radius: 17px;
+    }
+
+    .navbar {
+        width: 88%;
+        height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 8%;
+        right: 8%;
+        z-index: 10;
+        background: #201a28;
+        padding: 20px;
+        border: 1px solid #ffffff20;
+        border-radius: 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 45px 8% 20px;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-art {
+        min-height: 350px;
+    }
+
+    .about-grid,
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-visual {
+        min-height: 230px;
+    }
+
+    .contact-panel {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 45px 0;
+    }
+
+    .skills-grid,
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-art {
+        min-height: 310px;
+    }
+
+    .art-card {
+        width: 215px;
+        height: 270px;
+    }
+
+    .art-glow {
+        width: 245px;
+        height: 245px;
+    }
+
+    .info-card,
+    .skill-card {
+        padding: 21px;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    .contact-panel {
+        padding: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="logo">AMG<span>✦</span></a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-expanded="false" aria-controls="navLinks">
+            ☰ Menu
+        </button>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+
+            <div class="nav-socials">
+                <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+
+            <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="eyebrow">Welcome to my portfolio</div>
+
+                <h1>
+                    Agustin Miguel
+                    <span>Gensis.</span>
+                </h1>
+
+                <h2>BSIT Student · LoRaPass Team Member</h2>
+
+                <p class="hero-description">
+                    I'm an Information Technology student exploring
+                    software development, connected devices, and creative
+                    technology. Discover my skills, academic work, and
+                    journey in the world of IT.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        VIEW MY PROJECTS ↗
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        ABOUT ME
+                    </a>
+                </div>
+            </div>
+
+            <!-- Abstract illustrated graphic, not a personal photograph -->
+            <div class="hero-art" aria-label="Decorative anime-inspired artwork">
+                <div class="art-glow"></div>
+                <div class="art-orbit"></div>
+                <div class="art-orbit two"></div>
+
+                <div class="art-card">
+                    <div class="art-line"></div>
+                    <div class="art-label">
+                        <strong>AMG</strong>
+                        <span>CREATIVE TECHNOLOGY</span>
+                    </div>
+                </div>
+
+                <span class="art-spark spark-a">✦</span>
+                <span class="art-spark spark-b">✧</span>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section-label">01 — Introduction</div>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-intro">
+                A student learning, building skills, and exploring how
+                technology can be used to solve practical problems.
+            </p>
+
+            <div class="about-grid">
+                <article class="info-card">
+                    <h3>Who I Am</h3>
+                    <p>
+                        Hello! I'm Agustin Miguel Gensis, a Bachelor of
+                        Science in Information Technology student.
+                        I'm interested in learning new technologies
+                        and applying my knowledge through academic
+                        projects and hands-on practice.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>My Capstone Project</h3>
+                    <p>
+                        I'm part of the LoRaPass capstone team, which is
+                        developing an IoT-based traffic signal management
+                        prototype focused on giving priority to emergency
+                        vehicles using ESP32 and LoRa communication.
+                    </p>
+
+                    <div class="details">
+                        <div class="detail">
+                            <small>Program</small>
+                            <strong>BSIT</strong>
+                        </div>
+                        <div class="detail">
+                            <small>Team</small>
+                            <strong>LoRaPass</strong>
+                        </div>
+                        <div class="detail">
+                            <small>School</small>
+                            <strong>Cebu Eastern College</strong>
+                        </div>
+                        <div class="detail">
+                            <small>Location</small>
+                            <strong>Philippines</strong>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <div class="section-label">02 — What I'm learning</div>
+            <h2 class="section-title">Skills & Interests</h2>
+            <p class="section-intro">
+                Technical areas and professional skills that I'm
+                interested in developing further.
+            </p>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Learning to create websites with clear layouts,
+                        responsive styling, and interactive elements.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">⌁</div>
+                    <h3>IoT Technology</h3>
+                    <p>
+                        Exploring microcontrollers, connected devices,
+                        sensors, and wireless communication.
+                    </p>
+                    <div class="tags">
+                        <span>ESP32</span>
+                        <span>LoRa</span>
+                        <span>Arduino IDE</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon">◇</div>
+                    <h3>Teamwork</h3>
+                    <p>
+                        Working with others, sharing ideas, and
+                        contributing to group project development.
+                    </p>
+                    <div class="tags">
+                        <span>Collaboration</span>
+                        <span>Planning</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- LORAPASS PROJECT -->
+        <section class="section" id="projects">
+            <div class="section-label">03 — Academic work</div>
+            <h2 class="section-title">Featured Project</h2>
+            <p class="section-intro">
+                A capstone project exploring smart traffic management
+                and emergency vehicle priority.
+            </p>
+
+            <article class="project-card">
+                <div class="project-visual">
+                    <div class="project-emblem">
+                        <span>🚦</span>
+                        <strong>LoRaPass</strong>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div class="project-type">IoT · Capstone Project</div>
+                    <h3>LoRaPass</h3>
+
+                    <p>
+                        An IoT-Based Adaptive Traffic Signal Management
+                        System Using LoRa RA-02 and ESP32 for Ambulance
+                        and Fire Truck Priority on Colon Street.
+                    </p>
+
+                    <ul>
+                        <li>Emergency vehicle priority concept.</li>
+                        <li>ESP32 microcontrollers and LoRa communication.</li>
+                        <li>Controlled traffic intersection prototype.</li>
+                        <li>Project documentation and testing.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- GOALS -->
+        <section class="section" id="goals">
+            <div class="section-label">04 — My future</div>
+            <h2 class="section-title">Goals & Ambitions</h2>
+
+            <div class="goals-grid">
+                <article class="goal-card">
+                    <span>01 / LEARN</span>
+                    <h3>Grow My Technical Knowledge</h3>
+                    <p>
+                        Improve my programming and understanding of
+                        emerging technologies.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <span>02 / BUILD</span>
+                    <h3>Develop Useful Projects</h3>
+                    <p>
+                        Apply my knowledge to projects that explore
+                        solutions to practical challenges.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <span>03 / CONNECT</span>
+                    <h3>Work Well With Others</h3>
+                    <p>
+                        Strengthen my communication and collaboration
+                        through teamwork.
+                    </p>
+                </article>
+
+                <article class="goal-card">
+                    <span>04 / ACHIEVE</span>
+                    <h3>Prepare for My IT Career</h3>
+                    <p>
+                        Continue learning and build a portfolio that
+                        reflects my development and achievements.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <div class="separator"></div>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="contact-panel">
+                <div>
+                    <div class="section-label">05 — Contact</div>
+                    <h2>Let's connect.</h2>
+                    <p>
+                        Have an idea, a project, or an opportunity
+                        to collaborate? Feel free to reach out.
+                    </p>
+                    <a class="email" href="mailto:miguel22gensis@gmail.com">
+                        miguel22gensis@gmail.com
+                    </a>
+                </div>
+
+                <a class="btn btn-primary" href="mailto:miguel22gensis@gmail.com">
+                    SAY HELLO ↗
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© <span id="year"></span> <strong>Agustin Miguel Gensis</strong></p>
+        <div class="footer-socials">
+            <a href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://linkedin.com/in/your-linkedin-username" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰ Menu";
+        });
+    });
+</script>
+</body>
+</html>
